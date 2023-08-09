@@ -1,12 +1,26 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import Header from './Header.tsx'
 import App from './App.tsx'
+import ResumePage from './Pages/ResumePage.tsx'
 import './index.css'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/resume",
+    element: <ResumePage />,
+  },
+]);
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <Header />
-    <App />
-  </React.StrictMode>,
-)
+    <RouterProvider router={router} />
+  </React.StrictMode>
+);
