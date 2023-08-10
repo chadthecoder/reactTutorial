@@ -38,30 +38,17 @@ function Header(props) {
           <>
     <header>
     <Nav variant="pills" defaultActiveKey="/home">
-      {names.map((link) =>{
-        console.log(link);
-        let linkArr = link.split('.');
-        console.log(linkArr[0]);
+      {names.map((link) => {
+        //console.log(link);
+        const linkArr = link.split('.');
+        //console.log(linkArr[0]);
         if(linkArr.length <= 2)
         {
           return (<Nav.Item><Nav.Link href={linkArr[1]}>{linkArr[0]}</Nav.Link></Nav.Item>);
         }
-        else
-        {
-          for(i=0; i<linkArr.length; i++)
-          {
-            return
-            (
-              <NavDropdown title="Resumes" id="nav-dropdown">
-              <NavDropdown.Item href="/resume">PDF Resume</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item>DOCX Resume (Download)</NavDropdown.Item>
-              </NavDropdown>
-            );
-          }
-        }
+      }
+)}
         
-      })}
       <Nav.Item>
         <Nav.Link href="/">{props.menu}</Nav.Link>
       </Nav.Item>
