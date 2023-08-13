@@ -50,7 +50,7 @@ function Header(props) {
 )}
         
       <Nav.Item>
-        <Nav.Link href="/">{props.menu}</Nav.Link>
+        <Nav.Link href="/">Home</Nav.Link>
       </Nav.Item>
       <NavDropdown title="Resumes" id="nav-dropdown">
         <NavDropdown.Item href="/resume">PDF Resume</NavDropdown.Item>
@@ -58,7 +58,7 @@ function Header(props) {
         <NavDropdown.Item>DOCX Resume (Download)</NavDropdown.Item>
       </NavDropdown>
       <Nav.Item>
-        <Nav.Link href="/resume">Game</Nav.Link>
+        <Nav.Link href="/game">Game</Nav.Link>
       </Nav.Item>
       <Nav.Item>
         <Nav.Link href="/resume">Portfolio</Nav.Link>

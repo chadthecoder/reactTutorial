@@ -1,0 +1,15 @@
+#game {
+	width: 50vh;
+	height: 50vh;
+}
+
+#shape
+{
+    /*width: 40vh;
+    height: 40vh;
+    background-color: green;*/
+}
+
+#best {
+ color: blue;
+}
