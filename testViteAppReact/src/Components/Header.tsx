@@ -22,23 +22,16 @@ import { useLinkClickHandler } from 'react-router-dom';
 
 function Header(props) {
 
-  let names = props.menu.split(',');
-
-  //let ans = names[0];
-  //console.log(ans);
-
-//let names = props.menu;
-//console.log(typeof names);
-//let ans = names.split(",");
-//console.log(names);
-//let ans = names;
+  //tried to make customizable header, could not figure out dropdown menu yet
+  //let names = props.menu.split(',');
 
 
         return  (
           <>
     <header>
     <Nav variant="pills" defaultActiveKey="/home">
-      {names.map((link) => {
+      {/* part 2 of dropdown issue
+      {names.map((link) => { 
         //console.log(link);
         const linkArr = link.split('.');
         //console.log(linkArr[0]);
@@ -47,7 +40,7 @@ function Header(props) {
           return (<Nav.Item><Nav.Link href={linkArr[1]}>{linkArr[0]}</Nav.Link></Nav.Item>);
         }
       }
-)}
+)}*/}
         
       <Nav.Item>
         <Nav.Link href="/">Home</Nav.Link>
@@ -55,7 +48,7 @@ function Header(props) {
       <NavDropdown title="Resumes" id="nav-dropdown">
         <NavDropdown.Item href="/resume">PDF Resume</NavDropdown.Item>
         <NavDropdown.Divider />
-        <NavDropdown.Item>DOCX Resume (Download)</NavDropdown.Item>
+        <NavDropdown.Item href='/resume'>DOCX Resume (Download)</NavDropdown.Item>
       </NavDropdown>
       <Nav.Item>
         <Nav.Link href="/game">Game</Nav.Link>
