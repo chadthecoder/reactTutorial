@@ -3,7 +3,7 @@ import '../css/GamePage.css'
 
 function GamePage() {
 
-let display = false;
+//let display = false;
 let gameWidth;
 let gameHeight;
 let bestTime = 100;
@@ -18,23 +18,23 @@ function changeShape()
 		console.log('change shape start');
     console.log(gameId);
 		
-		gameWidth = gameId.clientWidth;
-		gameHeight = gameId.clientHeight;
+		gameWidth = gameId!.clientWidth;
+		gameHeight = gameId!.clientHeight;
 		
   shapeNumber = Math.random();
 
 		if(Math.random() < 0.5) // circle
 		{
-			shapeId.style.borderRadius = "50%";
-			let size = Math.floor(Math.random() * 400) + 10+"px";
-			shapeId.style.width = size;
-			shapeId.style.height = size;
+			shapeId!.style.borderRadius = "50%";
+			const size = Math.floor(Math.random() * 400) + 10+"px";
+			shapeId!.style.width = size;
+			shapeId!.style.height = size;
 		}
 		else if(shapeNumber >= 0.5) //square ish
 		{
-			shapeId.style.borderRadius = "0%";
-			shapeId.style.width = Math.floor(Math.random() * 400) + 10+"px";
-		 	shapeId.style.height = Math.floor(Math.random() * 400) + 10+"px";
+			shapeId!.style.borderRadius = "0%";
+			shapeId!.style.width = Math.floor(Math.random() * 400) + 10+"px";
+		 	shapeId!.style.height = Math.floor(Math.random() * 400) + 10+"px";
 		}
 		//else //triangle not done
 		{
@@ -50,17 +50,17 @@ function changeShape()
 		
 		}
 	
-	 shapeId.style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
-		shapeId.style.marginLeft = Math.floor(Math.random() * gameWidth)+"px";
+	 shapeId!.style.marginTop = Math.floor(Math.random() * gameHeight)+"px"; // - document.getElementById("shape").style.height+"px";
+		shapeId!.style.marginLeft = Math.floor(Math.random() * gameWidth)+"px";
 
 		let color = "#"+ ('000000' + Math.floor(Math.random()*16777215).toString(16)).slice(-6);
 		if(color == "#FFFFFF")
 		{
 			color = "#0000FF";
 		}	
-		shapeId.style.backgroundColor = color;
+		shapeId!.style.backgroundColor = color;
 
-	shapeId.style.display = "block";
+	shapeId!.style.display = "block";
 	start = new Date().getTime();
 }
 
@@ -75,10 +75,10 @@ function goodbye()
 	end = new Date().getTime();
 	time = (end - start)/1000;
 	if(time < bestTime) bestTime = time;
-	shapeId.style.display = "none";
+	shapeId!.style.display = "none";
 
-	document.getElementById("time").innerHTML = "The time taken was: " + time + "s";
-	document.getElementById("best").innerHTML = "The best time so far was: " + bestTime + "s";
+	document.getElementById("time")!.innerHTML = "The time taken was: " + time + "s";
+	document.getElementById("best")!.innerHTML = "The best time so far was: " + bestTime + "s";
 
 	appearDelay();
 }
@@ -88,7 +88,7 @@ appearDelay();
 
   return (
     <div>
-        <Header menu='fun.test,yay.from'/>
+        <Header />
 
           <h1 id="time">Tap the Shape!!!</h1>
           <h2 id="best">How fast can you tap the shape?</h2>

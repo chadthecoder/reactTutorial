@@ -10,7 +10,8 @@ function ResumePage() {
 
   return (
     <>
-        <Header menu={'Home./,Resume.resume'}/>
+    
+        <Header />
 
     <a href='../files/Resume.docx'>Hi</a>
 

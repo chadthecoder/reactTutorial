@@ -1,6 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import { useLinkClickHandler } from 'react-router-dom';
+//import { useLinkClickHandler } from 'react-router-dom';
 
 //figure out loop render in tsx/react?
 
@@ -20,8 +20,8 @@ import { useLinkClickHandler } from 'react-router-dom';
         }
 }*/
 
-function Header(props) {
-
+function Header() { //Header(props: string)
+ 
   //tried to make customizable header, could not figure out dropdown menu yet
   //let names = props.menu.split(',');
 
