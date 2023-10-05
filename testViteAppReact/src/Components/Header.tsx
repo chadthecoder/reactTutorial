@@ -1,5 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import '../css/Header.css'
 //import { useLinkClickHandler } from 'react-router-dom';
 
 //figure out loop render in tsx/react?
@@ -25,9 +26,8 @@ function Header() { //Header(props: string)
   //tried to make customizable header, could not figure out dropdown menu yet
   //let names = props.menu.split(',');
 
-
         return  (
-          <>
+          <div className='headerComp'>
     <header>
     <Nav variant="pills" defaultActiveKey="/home">
       {/* part 2 of dropdown issue
@@ -58,7 +58,7 @@ function Header() { //Header(props: string)
       </Nav.Item>
     </Nav>
     </header>
-    </>
+    </div>
     );
   }
 
