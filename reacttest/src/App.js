@@ -1,8 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-import './Components/Test';
 import Test from './Components/Test';
+import Ram from './Components/Ram';
 
 function App() {
   return (
@@ -23,6 +23,10 @@ function App() {
       </header>
   
     <Test/>
+
+    <br/><br/><br/><br/>
+
+    <Ram/>
 
     <br/><br/><br/><br/>
 

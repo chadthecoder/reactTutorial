@@ -1,9 +1,9 @@
-import './Test.css';
+import './Comp.css';
 
 function Test() {
   return (
-    <div className="Test">
-      <input className="Test-input" type="text"></input>
+    <div className="Comp">
+      <input className="Comp-input" type="text"></input>
     </div>
   );
 }
