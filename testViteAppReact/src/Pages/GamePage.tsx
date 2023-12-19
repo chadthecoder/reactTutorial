@@ -1,5 +1,5 @@
 import Header from "../Components/Header";
-import '../css/GamePage.css'
+import '../css/GamePage.css';
 
 function GamePage() {
 
